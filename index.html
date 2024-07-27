@@ -8,7 +8,8 @@
 <body>
     <script>
         function getComputerChoice(){
-            let c=Math.random()*10;
+            let c=parseInt(Math.random()*10);
+            console.log(c);
             if(c<4){
                 return "rock";
             }
@@ -19,30 +20,33 @@
                 return "scissor";
         }
         
-        let hs=0
-        let cs=0
+        let hs=0;
+        let cs=0;
         
         function playround(human,comp){
-            if((comp=="rock" && human=="scissor") || (comp=="paper" && human=="rock") || (comp="scissor" && human=="paper")){
-                cs++
-                console.log("The Computer choose " + comp +". You Lost this round!")
-            }
-            if((comp=="scissor" && human=="rock")||(comp=="paper" && human=="scissor")||(comp=="rock" && human=="paper")){
-                hs++
-                console.log("The Computer choose " + comp +". You Won this round!")
-            }
+            if((comp=='rock' && human =='scissor') || (comp =='paper' && human=='rock') || (comp=='scissor' && human=='paper'))
+                cs++;
+            if((human=='rock' && comp =='scissor') || (human =='paper' && comp=='rock') || (human=='scissor' && comp=='paper'))
+                hs++;
         }
         let i=0
-        for(i=0;i<5;i++){
-            let comp=getComputerChoice()
-            let human=(prompt("Enter your choice: Rock, Paper or Scissor")).toLowerCase()
+        for(i=0;i<3;i++){
+            let human=(prompt("Enter your choice: Rock, Paper or Scissor")).toLowerCase();
+            console.log("Your choice: "+human);
+            let comp=getComputerChoice();
+            console.log("computer choice: "+comp);
             playround(human,comp)
         }
+        console.log("Your Score: "+hs);
+        console.log("Computer's Score: "+cs);
         if(hs>cs){
-            console.log("You have defeated the Computer!")
+            console.log("You have defeated the Computer!");
+        }
+        else if(cs>hs){
+            console.log("The Computer has defeated you!");
         }
         else{
-            console.log("The Computer has beaten You!")
+            console.log("There has been a tie!");
         }
     </script>
 </body>
