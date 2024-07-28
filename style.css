@@ -1,0 +1,95 @@
+/* * { 
+    outline: 1px solid red;
+    outline-offset: -1px;
+} */
+
+.body{
+    /* display: flex; */
+    border: 2px solid red;
+    margin:0;
+    padding:0;
+}
+
+.heading{
+    display: flex;
+    /* margin: 15px; */
+    align-items: center;
+    justify-content:center;
+    font-size: 60px;
+    font-style:oblique;
+    background-color:rgb(207, 161, 61);
+    padding: 2px;
+    border-radius: 15px;
+    margin-bottom: 70px;
+    flex-wrap: wrap;
+}
+
+.flex-container{
+    display:flex;
+}
+
+
+.flex-container .choices{
+
+    flex-direction: column;
+    justify-content: center;
+    width:500px;
+    text-align: center;
+    font-size: 20px;
+    font-weight:500;
+    border:3px solid rgb(11, 11, 0);
+    border-radius: 10px;
+    margin-left: 15%;
+    padding: 5px;
+    flex-wrap:wrap;
+    
+}
+
+.flex-container .result{
+    flex-direction: column;
+    margin-left: 40%;
+    margin-right:15%;
+    width:500px;
+    justify-content: center;
+    text-align: center;
+    border: 3px solid black;
+    border-radius:10px;
+    font-weight: bold;
+    flex-wrap:wrap;
+}
+
+.choices .container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-content: space-around;
+}
+
+
+.button{
+    background-color: rgb(121, 66, 10);
+    color:rgb(255, 255, 255);
+    height: 35px;
+    border-radius: 10px;
+    font-size: 17px;
+}
+
+#compchoice, #hs, #cs{
+    padding:10px;
+    margin: 5px;
+}
+
+.images{
+    display:flex;
+    justify-content: space-around;
+    margin:60px;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    padding: 30px;
+    background-color: #1F2937;
+    color: white;
+    margin:0;
+}
